@@ -1,6 +1,6 @@
 @media screen and (max-width: 480px) {
 
-    :root{
+    :root {
         --h2-font-size: 50px;
         --h3-font-size: 30px;
         --p-font-size: 18px;
@@ -9,9 +9,10 @@
 
     header {
         .container {
-            .logo{
+            .logo {
                 font-size: 2em;
             }
+
             nav {
                 display: none;
             }
@@ -20,9 +21,9 @@
 
     main {
         .home {
-            .container{
-                .box-wrapper{
-                    grid-template-columns: repeat(1,1fr);
+            .container {
+                .box-wrapper {
+                    grid-template-columns: repeat(1, 1fr);
                 }
             }
         }
@@ -36,6 +37,18 @@
                     }
                 }
             }
+        }
+    }
+
+    footer {
+        .container-top {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .container-bottom {
+            flex-direction: column;
+            gap: 20px;
         }
     }
 }

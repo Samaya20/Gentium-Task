@@ -77,6 +77,7 @@ header {
     @include align;
     background-color: var(--main-bg);
     padding: 60px 0px;
+    z-index: 999;
 
     .container {
         width: 100%;
@@ -150,6 +151,7 @@ header.is-sticky {
 
 // Header styles end
 
+// Main styles start
 
 main {
 
@@ -266,7 +268,7 @@ main {
                     transition: all 300ms ease-in-out;
 
 
-                    i:first-of-type {
+                    .fa-regular {
                         color: #ffffff71;
                         font-size: var(--icon-size);
                         transition: all 300ms;
@@ -333,6 +335,14 @@ main {
         width: 100%;
         @include align;
         flex-direction: column;
+        padding: 40px 0px;
+
+        .divider {
+            width: 2px;
+            height: 70px;
+            background: var(--main-color);
+            margin-top: 30px;
+        }
 
         .container {
             width: 100%;
@@ -395,7 +405,7 @@ main {
                     filter: grayscale(1);
                     object-fit: cover;
                     transform: scale(1);
-                    transition: all 200ms ease-in-out;
+                    transition: all 300ms ease-in-out;
                 }
 
                 .overlay {
@@ -408,20 +418,20 @@ main {
                     @include align;
                     flex-direction: column;
                     background: rgba(0, 0, 0, 0.411);
-                    transition: all 200ms ease-in-out;
+                    transition: all 300ms ease-in-out;
 
                     h3 {
                         opacity: 0;
                         transform: translateX(-50%);
                         font-size: var(--h3-font-size);
-                        transition: all 200ms ease-in-out;
+                        transition: all 300ms ease-in-out;
                     }
 
                     p {
                         opacity: 0;
                         transform: translateX(-50%);
                         font-size: var(--p-font-size);
-                        transition: all 200ms ease-in-out;
+                        transition: all 300ms ease-in-out;
                     }
                 }
 
@@ -451,5 +461,82 @@ main {
 
     // Works styles end
 }
+
+// Main styles end
+
+// Footer styles start
+
+footer {
+    width: 100%;
+    background: var(--secondary-color);
+    @include align;
+    flex-direction: column;
+
+    .container-top {
+        width: 100%;
+        background: var(--secondary-color);
+        @include align;
+        justify-content: space-between;
+        padding: 60px 20px;
+
+        .icons {
+            display: flex;
+            gap: 15px;
+
+            i {
+                border: 1px solid var(--main-color);
+                border-radius: 50%;
+                background: transparent;
+                padding: 20px;
+                cursor: pointer;
+                transition: all 300ms ease-in-out;
+                font-size: 20px;
+
+                &:hover {
+                    background: var(--main-color);
+                }
+            }
+        }
+
+        h3 {
+            font-size: var(--h3-font-size);
+        }
+
+        p {
+            font-size: var(--p-font-size);
+        }
+
+        a {
+            @include button;
+        }
+    }
+
+    .parent-container {
+        width: 100%;
+        @include align;
+        background: var(--main-bg);
+        padding: 30px 0px;
+
+
+        .container-bottom {
+            width: 100%;
+            @include align;
+            justify-content: space-between;
+
+            p {
+                font-size: var(--p-font-size);
+                color: #ffffff9f;
+            }
+
+            .info {
+                @include align;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+// Footer styles end
+
 
 @import '_media';

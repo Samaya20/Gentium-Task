@@ -58,6 +58,7 @@ header {
   align-items: center;
   background-color: var(--main-bg);
   padding: 60px 0px;
+  z-index: 999;
 }
 header .container {
   width: 100%;
@@ -227,7 +228,7 @@ main .services .container .box-wrapper .box-item {
   background: var(--text-white);
   transition: all 300ms ease-in-out;
 }
-main .services .container .box-wrapper .box-item i:first-of-type {
+main .services .container .box-wrapper .box-item .fa-regular {
   color: rgba(255, 255, 255, 0.4431372549);
   font-size: var(--icon-size);
   transition: all 300ms;
@@ -273,6 +274,13 @@ main .works {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 40px 0px;
+}
+main .works .divider {
+  width: 2px;
+  height: 70px;
+  background: var(--main-color);
+  margin-top: 30px;
 }
 main .works .container {
   width: 100%;
@@ -337,7 +345,7 @@ main .works .box-wrapper .box-item .bg-img {
   -o-object-fit: cover;
      object-fit: cover;
   transform: scale(1);
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 main .works .box-wrapper .box-item .overlay {
   opacity: 0;
@@ -351,19 +359,19 @@ main .works .box-wrapper .box-item .overlay {
   align-items: center;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.411);
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 main .works .box-wrapper .box-item .overlay h3 {
   opacity: 0;
   transform: translateX(-50%);
   font-size: var(--h3-font-size);
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 main .works .box-wrapper .box-item .overlay p {
   opacity: 0;
   transform: translateX(-50%);
   font-size: var(--p-font-size);
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 main .works .box-wrapper .box-item:hover .bg-img {
   filter: grayscale(0);
@@ -379,6 +387,82 @@ main .works .box-wrapper .box-item:hover .overlay h3 {
 main .works .box-wrapper .box-item:hover .overlay p {
   opacity: 1;
   transform: translateX(0);
+}
+
+footer {
+  width: 100%;
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .container-top {
+  width: 100%;
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+}
+footer .container-top .icons {
+  display: flex;
+  gap: 15px;
+}
+footer .container-top .icons i {
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+  background: transparent;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  font-size: 20px;
+}
+footer .container-top .icons i:hover {
+  background: var(--main-color);
+}
+footer .container-top h3 {
+  font-size: var(--h3-font-size);
+}
+footer .container-top p {
+  font-size: var(--p-font-size);
+}
+footer .container-top a {
+  background: transparent;
+  border: 1px solid var(--main-color);
+  padding: 20px 30px;
+  font-size: var(--p-font-size);
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+}
+footer .container-top a:hover {
+  background: var(--main-color);
+}
+footer .parent-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-bg);
+  padding: 30px 0px;
+}
+footer .parent-container .container-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .parent-container .container-bottom p {
+  font-size: var(--p-font-size);
+  color: rgba(255, 255, 255, 0.6235294118);
+}
+footer .parent-container .container-bottom .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 @media screen and (max-width: 480px) {
@@ -400,5 +484,13 @@ main .works .box-wrapper .box-item:hover .overlay p {
   main .works .container .text-wrapper .view-all {
     font-size: 15px;
     padding: 15px 20px;
+  }
+  footer .container-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .container-bottom {
+    flex-direction: column;
+    gap: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

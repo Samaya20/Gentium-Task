@@ -1,0 +1,41 @@
+@media screen and (max-width: 480px) {
+
+    :root{
+        --h2-font-size: 50px;
+        --h3-font-size: 30px;
+        --p-font-size: 18px;
+        --icon-size: 50px;
+    }
+
+    header {
+        .container {
+            .logo{
+                font-size: 2em;
+            }
+            nav {
+                display: none;
+            }
+        }
+    }
+
+    main {
+        .home {
+            .container{
+                .box-wrapper{
+                    grid-template-columns: repeat(1,1fr);
+                }
+            }
+        }
+
+        .works {
+            .container {
+                .text-wrapper {
+                    .view-all {
+                        font-size: 15px;
+                        padding: 15px 20px;
+                    }
+                }
+            }
+        }
+    }
+}

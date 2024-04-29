@@ -472,6 +472,9 @@ footer .parent-container .container-bottom .info {
     --p-font-size: 18px;
     --icon-size: 50px;
   }
+  header .container {
+    justify-content: center;
+  }
   header .container .logo {
     font-size: 2em;
   }
